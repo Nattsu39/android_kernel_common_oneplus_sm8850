@@ -1,0 +1,33 @@
+{
+  "recipe": {
+    "repository": "IronShing/OnePlus_KernelSU_SUSFS",
+    "commit": "4b029239a20606d10d5a9d8045d308e24985fa71"
+  },
+  "kernel_base": {
+    "repository": "IronShing/android_kernel_common_oneplus_sm8850",
+    "commit": "c1cb51cf29aabfd401f513a43ddfc0058e319997"
+  },
+  "resukisu": {
+    "repository": "ReSukiSU/ReSukiSU",
+    "commit": "7741f87849f7ad7cebf82bbb4c5b89880e61e37e"
+  },
+  "susfs": {
+    "repository": "cctv18/susfs4oki",
+    "commit": "bd9bce89512dec7f8db64eaa6d45bdfc28961cad"
+  },
+  "kernel_patches": {
+    "repository": "WildKernels/kernel_patches",
+    "commit": "6414509867d99ce8b51bc84b1e5392e989388a68"
+  },
+  "baseband_guard": {
+    "repository": "vc-teahouse/Baseband-guard",
+    "commit": "a54e0dc6cf0aff4dd87fec49644a02d2eb612905"
+  },
+  "notes": [
+    "Camera shared GPIO reference counting and DP virtual modes are part of the kernel base.",
+    "ReSukiSU is pinned to the version embedded in upstream real-38's successful artifact.",
+    "Other formerly mutable dependencies use their latest commit preceding that build; the historic run did not prove their exact revisions.",
+    "Imported changes are committed directly, without external driver symlinks or build-time patches.",
+    "The OnePlus-specific BBG ABL/EFISP flashing exception is excluded; standard BBG partition protection is retained."
+  ]
+}
